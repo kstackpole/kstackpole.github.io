@@ -1,71 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kyle Stackpole | Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1>Kyle Stackpole</h1>
-      <p>Developer • Designer • Problem Solver</p>
-    </div>
-  </header>
-
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I’m a multi-disciplinary developer and designer with a passion for building intuitive tools, applications, and marketing experiences. From dynamic email templates to interactive map applications, I enjoy crafting clean solutions that blend form and function.</p>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <ul class="project-list">
-        <li>
-          <h3>Platmap Pro</h3>
-          <p>An automated map generation tool that transforms plat maps into interactive SVG visuals for web apps and print.</p>
-        </li>
-        <li>
-          <h3>Email Template Engine</h3>
-          <p>A dynamic Freemarker/HTML system to create flexible, region-specific email campaigns for CRM platforms.</p>
-        </li>
-        <!-- Add more projects here -->
-      </ul>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <ul class="skill-list">
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>PHP</li>
-        <li>HTML/CSS</li>
-        <li>React</li>
-        <li>SQL</li>
-        <li>Adobe Creative Suite</li>
-        <li>QGIS / AutoCAD</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Let's work together! Reach out via <a href="mailto:kstackpole@example.com">email</a> or connect on <a href="https://www.linkedin.com/in/kstackpole/">LinkedIn</a>.</p>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>© 2025 Kyle Stackpole</p>
-    </div>
-  </footer>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kyle Stackpole | Portfolio</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+        <style>
+          body { font-family: 'Inter', sans-serif; }
+        </style>
+    </head>
+      <body class="bg-gray-100 text-gray-800">
+        <!-- Navbar -->
+        <nav class="bg-gray-900 text-white">
+          <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold">Kyle Stackpole</div>
+            <ul class="flex gap-6 text-sm font-medium">
+              <li><a href="index.html" class="hover:text-teal-400 underline underline-offset-4">Home</a></li>
+              <li><a href="about.html" class="hover:text-teal-400">About</a></li>
+              <li><a href="work.html" class="hover:text-teal-400">Work</a></li>
+              <li><a href="contact.html" class="hover:text-teal-400">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      
+        <!-- Hero Section -->
+        <header class="bg-white py-16">
+          <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+            <img src="images/headshot.jpg" alt="Kyle Stackpole" class="w-40 h-40 rounded-full object-cover border-4 border-gray-800 shadow-md" />
+            <div>
+              <h1 class="text-4xl font-bold mb-2">Kyle Stackpole</h1>
+              <p class="text-lg text-gray-600">Developer • Designer • Problem Solver</p>
+            </div>
+          </div>
+        </header>
+      
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 bg-gray-50">
+          <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Featured Work</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                <h3 class="text-xl font-semibold mb-2">Platmap Pro</h3>
+                <p class="text-gray-600">Automated plat map to SVG workflow for interactive community maps.</p>
+              </div>
+              <div class="p-6 bg-white rounded-lg shadow hover:shadow-md transition">
+                <h3 class="text-xl font-semibold mb-2">Email Template Engine</h3>
+                <p class="text-gray-600">Dynamic Freemarker-powered templates for personalized CRM emails.</p>
+              </div>
+              <!-- Add more cards as needed -->
+            </div>
+          </div>
+        </section>
+      
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-6 mt-12">
+          <div class="text-center text-sm">
+            © 2025 Kyle Stackpole
+          </div>
+        </footer>
+      </body>
+      
 </html>
