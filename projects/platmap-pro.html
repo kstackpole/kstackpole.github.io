@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Project Breakdown Template</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+        <style>
+          body { font-family: 'Inter', sans-serif; }
+        </style>
+      </head>      
+    <body class="bg-gray-50 text-gray-800">
+        <!-- Navbar -->
+        <nav class="bg-gray-900 text-white" x-data="{ open: false }">
+            <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold">Kyle Stackpole</div>
+            <!-- Hamburger Icon (Mobile only) -->
+            <button @click="open = !open" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+    
+            <!-- Desktop Nav -->
+            <ul class="hidden md:flex gap-6 text-sm font-medium">
+                <li><a href="index.html" class="hover:text-teal-400 underline underline-offset-4">Home</a></li>
+                <li><a href="#about" class="hover:text-teal-400">About</a></li>
+                <li><a href="work.html" class="hover:text-teal-400">Work</a></li>
+                <li><a href="contact.html" class="hover:text-teal-400">Contact</a></li>
+            </ul>
+            </div>
+            <!-- Mobile Nav -->
+            <div x-show="open" class="md:hidden px-4 pb-4">
+                <ul class="flex flex-col gap-2 text-sm font-medium">
+                    <li><a href="index.html" class="hover:text-teal-400 underline underline-offset-4">Home</a></li>
+                    <li><a href="#about" class="hover:text-teal-400">About</a></li>
+                    <li><a href="work.html" class="hover:text-teal-400">Work</a></li>
+                    <li><a href="contact.html" class="hover:text-teal-400">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Hero Header -->
+        <header class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-24">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold mb-4">Project Name</h1>
+            <p class="text-lg max-w-2xl mx-auto">A creative, technical, and user-centered solution designed to solve real-world problems with flair.</p>
+        </div>
+        </header>
+
+        <!-- Visual Overview Section -->
+        <section class="py-16">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+            <img src="images/project-hero.jpg" alt="Project visual" class="rounded-lg shadow-md">
+            <div>
+            <h2 class="text-3xl font-bold mb-4">Overview</h2>
+            <p class="text-gray-700 mb-4">Brief background of the project, goals, and unique challenges faced during development or design.</p>
+            <ul class="list-disc list-inside text-gray-600">
+                <li>Goal-oriented design</li>
+                <li>Custom interface elements</li>
+                <li>Streamlined UX and accessibility</li>
+            </ul>
+            </div>
+        </div>
+        </section>
+
+        <!-- Carousel Section -->
+        <section class="bg-white py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Project Screenshots</h2>
+            <div id="carousel" class="splide" aria-label="Screenshots">
+            <div class="splide__track">
+                <ul class="splide__list">
+                <li class="splide__slide"><img src="images/screen1.jpg" alt="Screen 1"></li>
+                <li class="splide__slide"><img src="images/screen2.jpg" alt="Screen 2"></li>
+                <li class="splide__slide"><img src="images/screen3.jpg" alt="Screen 3"></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- Other Projects -->
+        <section class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">More Projects</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+                <img src="images/thumb1.jpg" class="rounded-md mb-3">
+                <h3 class="text-lg font-semibold">Project One</h3>
+                <p class="text-gray-600 text-sm">Short summary of the project to entice clicks.</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+                <img src="images/thumb2.jpg" class="rounded-md mb-3">
+                <h3 class="text-lg font-semibold">Project Two</h3>
+                <p class="text-gray-600 text-sm">Short summary of the project to entice clicks.</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+                <img src="images/thumb3.jpg" class="rounded-md mb-3">
+                <h3 class="text-lg font-semibold">Project Three</h3>
+                <p class="text-gray-600 text-sm">Short summary of the project to entice clicks.</p>
+            </div>
+            </div>
+        </div>
+        </section>
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+                <!-- Pop-out image -->
+                <div class="relative">
+                    <div class="absolute top-4 left-4 w-full h-full bg-teal-100 rounded-lg -z-10"></div>
+                    <img src="../images/headshot.jpg" alt="Kyle Stackpole" class="rounded-lg shadow-lg relative z-10"/>
+                </div>
+                <!-- Text + Links -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">Work with me</h2>
+                    <p class="text-gray-700 mb-6">
+                        I’m a multidisciplinary developer and designer with a passion for building tools and experiences that are both functional and fun. I thrive where creativity meets code.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        I grew up in the Denver metro area and later moved to Atlanta, Georgia, to study Digital Media. My time in the Southeast was spent honing my craft in music and media, where I discovered a love for the digital canvas. Now, I’ve brought that passion back to the Mile High City, blending tech and design to build thoughtful, engaging experiences.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        Today, I bring a full-stack mindset to every project, with fluency across design systems, front-end development, and automation tools. Whether I’m streamlining workflows or shaping intuitive user experiences, I’m always aiming to build things that are thoughtful, efficient, and just a little unexpected.
+                    </p>
+                    <div class="flex gap-4 text-teal-600 text-2xl mt-4">
+                        <a href="mailto:k.stackpole94@gmail.com" aria-label="Email" class="hover:text-teal-800">
+                            <i data-feather="mail"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kyle-stackpole/" target="_blank" aria-label="LinkedIn" class="hover:text-teal-800">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="https://github.com/kstackpole" target="_blank" aria-label="GitHub" class="hover:text-teal-800">
+                            <i data-feather="github"></i>
+                        </a>
+                        <a href="https://instagram.com/common_spelling_kyle" target="_blank" aria-label="Instagram" class="hover:text-teal-800">
+                            <i data-feather="instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-6 mt-12">
+            <div class="text-center text-sm">
+                © 2025 Kyle Stackpole
+            </div>
+        </footer>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new Splide('#carousel', {
+            type    : 'loop',
+            perPage : 1,
+            autoplay: true,
+            gap: '1rem',
+            }).mount();
+        });
+        </script>
+
+        <script>
+            feather.replace()
+        </script>
+
+        <script>
+            tsParticles.load("tsparticles", {
+                fullScreen: { enable: false },
+                particles: {
+                    number: { value: 70 },
+                    color: { value: "#d1d5db" },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.4 },
+                    size: { value: 3 },
+                    move: {
+                    enable: true,
+                    speed: 1,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    outModes: "out"
+                    },
+                    links: { enable: false }
+                },
+                interactivity: {
+                    events: { onHover: { enable: false } },
+                },
+                detectRetina: true
+                });
+        </script>
+    </body>
+</html>
